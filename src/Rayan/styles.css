@@ -1,0 +1,912 @@
+/* ---------------------------------------------NAVIGATION------------------------------------------ */
+
+#wd-rayan-navigation {
+  position: relative;
+  background-color: #023843;
+
+} 
+
+
+#mobile-navigation {
+  background-color: #023843;
+  color: white;
+}
+
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-nav .nav-item {
+  padding: 0.5rem 1rem;
+}
+
+.mobile-nav .nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.mobile-nav .nav-link:hover {
+  color: #00ffae;
+}
+
+
+/* ---------------------------LANDING PAGE FOR LAPTOPS (>1024px)-------------------------------------- */
+
+
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.container-background-1 {
+  position: relative;
+  width: 100%;
+  height: 36em;
+  background: url("/public/images/tech1.webp") no-repeat center center/cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: brightness(1);
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1200px;
+  padding: 2%;
+  color: rgb(1, 0, 9);
+
+
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+  margin-right: 2rem;
+
+  text-transform: uppercase;
+  animation: slideInFromLeft 1.5s ease-out;
+}
+
+.hero-text h1 {
+  font-weight: 900;
+  font-size: 60px;
+  color: #023843;
+
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin: 1rem 0;
+  color: #000102;
+  
+}
+
+
+.explore-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.5rem;
+  background-color: transparent; 
+  color: rgb(13, 13, 13);
+  border: 2px solid rgb(8, 8, 8);
+  border-radius: 50px 50px 50px 50px;
+  cursor: pointer;
+  width: 70%;
+
+
+}
+
+.explore-button:hover {
+  color: rgb(13, 13, 13);
+  transform: scale(1.05); 
+
+}
+
+
+.hero-image {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.hero-image img {
+
+  position:relative;
+  width: 80%;
+
+}
+
+.thought-bubbles-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2; 
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.thought {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #24555e;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  animation: float 3s infinite ease-in-out;
+  white-space: nowrap;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+
+
+.container-background-2 {
+  display: flex;
+  position: relative;
+  gap: 1rem;
+
+  justify-content: center;
+
+  background-color: #b4d9da;
+  height: 12em;
+
+  
+}
+
+#option-cards { 
+  background: #a0dcf0;
+  text-align: center;
+  width: 150%;
+  height: 8em;
+  margin-top: -30%
+}
+
+#option-cards > h3{ 
+  margin-top: 9%;
+
+}
+
+
+.card-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+  margin-top: 35%;
+
+}
+.hover-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: scale(1.05); 
+}
+
+
+#option-cards .hover-info {
+  position: absolute;
+  top: 0;
+  left: -100%; 
+  width: 100%;
+  height: 100%;
+  background-color: rgba(23, 119, 122, 0.9); 
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  transition: left 1s ease; 
+}
+
+
+
+
+#option-cards:hover .hover-info {
+  left: 0; 
+}
+
+
+.dialog-container {
+  margin: 20px 0;
+  margin-left: 20px;
+  width: 200%;
+  padding: 20px;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #eff4f4, #cde9e8);
+  box-shadow: 3px 3px 6px #d9d9d9, -3px -3px 6px #ffffff;
+  font-family: 'Arial', sans-serif;
+  text-align: left;
+  animation: fadeIn 1s ease-in-out;
+}
+.about-me-container p {
+  text-align: justify;
+  text-justify: inter-word; 
+  line-height: 1.6; 
+}
+
+
+
+
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+
+.modal-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #cbe1db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+
+.modal-content {
+  background: white;
+  margin-top: -7%;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.5s ease-in-out;
+}
+
+
+@keyframes slideIn {
+  from {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content input {
+  margin: 10px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal-content button {
+  padding: 10px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.modal-content > .modal-header > button {
+
+  width: 10%;
+}
+.modal-content button:hover {
+  background: #218838;
+}
+
+
+.info-button-course > .btn{
+  background-color: #aacf60;
+}
+.close {
+  font-size: 2rem;
+  color: #000;
+}
+
+
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+#skills-section {
+
+  background-color: #023843;
+  color: white;
+  justify-content: center;
+
+ 
+}
+
+
+
+.skills {
+  display: flex;
+  gap: 10em;
+  justify-content: center;
+}
+
+.skills .btn { 
+  width: 250px;
+
+}
+
+.progress-after { 
+  background: #cdd003;
+}
+
+
+.courses-container { 
+  display: flex;
+  justify-content: left;
+}
+
+.courses-grid { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 20px;
+  max-width: 1200px; 
+
+}
+
+.course-card {
+  width: 285px; 
+}
+
+#projects-container {
+  display: flex;
+  justify-content: center;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; 
+  max-width: 1200px; 
+}
+
+.project-card {
+  width: 300px; 
+}
+
+
+
+
+.projects-info {
+  display: flex;
+  align-items: flex-start; 
+}
+
+.project-skills {
+  flex: 1 1 40%; 
+  min-width: 300px;
+}
+
+.project-docs {
+  flex: 1 1 60%; 
+  min-width: 300px;
+}
+
+.project-docs .related-images {
+  width: 100%; 
+  max-width: 400px; 
+}
+
+
+
+#papers-section { 
+  background-color: #b4d9da;
+  padding: 1%;
+}
+
+#papers-section .card { 
+  background-color:#ebf8f9;
+}
+
+
+
+.container-background-3 {
+
+  position: relative;
+
+
+
+
+  height: 26em;
+
+  
+}
+
+
+.education-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem; 
+  width: 100%;
+  padding: 2rem; 
+  
+}
+
+.education-title { 
+  position: absolute;
+  transform: rotate(-90deg);
+  margin-top: 100px;
+  margin-left: -1100px;
+  letter-spacing: 30px
+}
+
+
+.aub, .nu, .clw, .pitt {
+  margin-top: -50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  max-width: 1200px; 
+}
+
+.aub img, .nu img, .clw img, .pitt img {
+  width: clamp(250px, 15vw, 300px); 
+  height: auto;
+  border-radius: 50%;
+
+}
+
+
+.clw-info,.pitt-info {
+  flex: 1;
+  max-width:1000px; 
+  width: 500px;
+  padding: 1rem;
+  border-left: 2px solid #023843;
+}
+
+.nu-info, .aub-info {
+  flex: 1;
+  max-width:1000px; 
+  width: 500px;
+  padding: 1rem;
+  border-right: 2px solid #023843;
+}
+
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto; 
+  margin-bottom: 3%;
+}
+
+
+.custom-shape-divider-top-1735500841 {
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-shape-divider-top-1735500841 .shape-fill {
+  fill:#023843;
+}
+
+
+.custom-shape-divider-top-1735500841-2 {
+  position: absolute;
+  top: 100;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1735500841-2 .shape-border {
+  fill: transparent;   
+  stroke: #ffffff;   
+  stroke-width: 4;     
+  fill:#ffffff;
+}
+
+.custom-shape-divider-top-1735500841-2 .svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 137px;
+
+
+}
+
+
+
+.activities-buffer { 
+  background: #023843;
+  height: 10em;
+}
+
+
+.activities-section {
+
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem; 
+  background: #023843;
+  width: 100%;
+  padding: 2rem; 
+
+}
+
+.activities-grid .card{ 
+
+  width: 20%;
+}
+
+
+.activities-grid { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  margin-left: 10%;
+
+  max-width: 1200px; 
+}
+
+.activities-grid h1{ 
+    text-align: center;
+}
+.activities-title { 
+
+
+  position: absolute;
+  transform: rotate(-90deg);
+  margin-top: 80px;
+  margin-left: -1100px;
+  letter-spacing: 30px;
+  color: white 
+}
+
+
+
+
+
+/* --------------------------LANDING PAGE FOR TABLETS (>768px and <1024px)------------------------- */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #wd-rayan-navigation > ul{
+        margin-left: -5%;
+    }
+    #wd-rayan-navigation > ul > li{
+      margin-left: -1%;
+  }
+  #wd-rayan-navigation .nav-item {
+    margin-left: -5%;
+  }
+  #wd-rayan-navigation  .github, #wd-rayan-navigation .insta, #wd-rayan-navigation .linkedin {
+    margin-left: -1%;
+  }
+  .container-background-1 {
+    flex-direction: column; 
+    height: auto; 
+    padding: 2rem;
+  }
+  .hero-section {
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+    text-align: center; 
+    gap: 2rem; 
+  }
+  .hero-text {
+    margin-bottom: 1rem; 
+    text-align: center;
+  }
+  .explore-button {
+    margin: 1rem 0; 
+  }
+  .hero-image {
+    margin-top: 2rem; 
+  }
+  .hero-image img {
+    width: 60%;
+    max-width: 400px; 
+  }
+
+
+  .education-title { 
+    position: relative;
+    color: #000;
+    transform: rotate(0deg);
+    margin-top: -50px;
+    margin-left: 10px;
+    letter-spacing: 30px;
+    margin-bottom: 10%;
+  }
+  
+  
+
+  
+  .aub img, .nu img, .clw img, .pitt img {
+    width: clamp(150px, 5vw, 300px); 
+    height: auto;
+    border-radius: 50%;
+  
+  }
+
+
+
+  .activities-section {
+
+    display: flex;
+  
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem; 
+    background: #023843;
+    width: 100%;
+    padding: 2rem; 
+  
+  }
+  
+  
+  
+
+  .activities-grid { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -5%;
+  
+    max-width: 1200px; 
+  }
+  
+  .activities-grid h1{ 
+      text-align: center;
+  }
+  .activities-title { 
+  
+    position: relative;
+    color: #ffffff;
+    transform: rotate(0deg);
+    margin-top: -100px;
+    margin-left: 0vw;
+    letter-spacing: 10px;
+  }
+  
+
+}
+
+
+/* --------------------------------------LANDING PAGE FOR MOBILE (<768px)--------------------------- */
+
+
+@media (max-width: 768px) {
+  .container-background-1 {
+    flex-direction: column; 
+    height: auto; 
+    padding: 2rem;
+  }
+
+  .hero-section {
+    flex-direction: column; 
+    width: 100%; 
+    text-align: center;
+  }
+
+  .hero-text {
+    margin: 0 0 1rem 0;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+  }
+  .explore-button {
+    margin-top: 1rem;
+  }
+
+  .hero-image {
+    margin-top: 2rem; 
+  }
+
+  .hero-image img {
+    width: 70%; 
+    max-width: 300px; 
+  }
+
+
+  .thought-bubbles-container {
+    display: none; 
+  }
+
+  .skills { 
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+  }
+
+
+  .skills .btn{
+    width: 100%;
+    text-align: center;
+  }
+
+
+  .progress {
+    width: auto;
+  }
+
+
+
+  .education-title { 
+    position: relative;
+    color: #000;
+    transform: rotate(0deg);
+    margin-top: -30px;
+    margin-left: 10px;
+    letter-spacing: 10px;
+    margin-bottom: 10%;
+  
+  }
+  
+  
+  .aub, .nu, .clw, .pitt {
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 10%;
+  }
+
+  .aub {
+    margin-bottom: 1%;
+  }
+  .aub ul, .nu ul, .clw ul, .pitt ul {
+    list-style: none; 
+  }
+  .aub h5, .nu h5, .clw h5, .pitt h5{
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: 5%;
+  }
+  
+  .aub .btn, .nu .btn, .clw .btn, .pitt .btn{
+    font-size:10px;
+    
+  }
+  .aub img, .nu img, .clw img, .pitt img {
+    display: none;
+  }
+  .clw-info,.pitt-info {
+    border-left: none;
+  }
+  
+  .nu-info, .aub-info {
+    border-right: none
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .activities-section {
+
+
+    flex-direction: column;
+    align-items: center;
+
+    background: #023843;
+    width: 100%;
+    padding: 2rem; 
+  
+  }
+  
+  
+  
+  
+  .activities-grid { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -10vw;
+    flex-direction: column;
+    align-items: stretch;
+  
+    max-width: 1200px; 
+  }
+  
+  .activities-grid h1{ 
+      text-align: center;
+  }
+  .activities-grid .card{ 
+ 
+    width: 100%;
+    margin-bottom: 5%;
+}
+  .activities-title { 
+  
+    position: relative;
+    color: #ffffff;
+    transform: rotate(0deg);
+    margin-top: -100px;
+    margin-left: 0vw;
+    letter-spacing: 10px;
+  }
+
+#option-cards .hover-info { 
+   display: none;
+  }
+
+  #option-cards { 
+    height:25vw;
+
+    width: auto;
+   }
+
+
+}
