@@ -200,9 +200,6 @@ export default function Home() {
               <h1>Fitness</h1>
             </div>
 
-            
-
-
 
             </div>
 
