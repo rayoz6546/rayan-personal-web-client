@@ -184,7 +184,7 @@ export default function Home() {
         <div className="activities-grid mb-5">
 
             <div className="card rounded-3 overflow-hidden ms-4" >
-              <img src="/images/piano.png" alt="" className="card-img-top" style={{ width: "100%", height: "250px", objectFit: "cover" }}/>
+              <img src="/images/v2.PNG" alt="" className="card-img-top" style={{ width: "100%", height: "250px", objectFit: "cover" }}/>
               <h1>Piano</h1>
             </div>
             <div className="card rounded-3 overflow-hidden ms-4" >
